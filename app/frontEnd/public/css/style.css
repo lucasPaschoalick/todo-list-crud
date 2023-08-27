@@ -1,0 +1,270 @@
+body{
+    background-color: rgb(23, 23, 23);
+}
+
+.container{
+    max-width: 1000px;    
+    margin: 100px auto;
+    padding: 50px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(32,33,36);
+}
+.row{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.row h1{
+    margin-top: 0;
+    color: #e3e3e3;
+    font-family: Sans-serif;
+}
+
+.formDiv{
+    width: 300px;
+}
+
+.formRow{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.formRow label{
+    color: #e3e3e3;
+    font-size: 18px;
+    font-family: Sans-serif;
+}
+
+.textArea{
+    font-size: 16px;    
+    font-family: Sans-serif;
+    padding: 4px 8px;
+    background-color: #fff;
+    border: none;
+    border-radius: 4px;
+    height: 50px;
+}
+
+.formButton{
+    padding: 10px;
+    margin: auto;
+    width: 100px;
+    background-color: #2282f0;
+    color: #e3e3e3;
+    border: 2px solid var(--input-border);
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-family: Sans-serif;
+    cursor: pointer;
+}
+
+.formButton:hover{
+    background-color: #155cad;
+}
+
+.taskList{
+    margin: auto;
+    margin-top: 70px;
+    width: 90%;
+}
+
+.taskList h2{
+    color: #e3e3e3;
+    font-family: Sans-serif;
+}
+
+
+.taskTable{
+    background-color: rgb(23, 23, 23);
+    border-radius: 15px;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+.taskTable th, td{    
+    text-align: center;
+    color: #e3e3e3;
+    font-family: Sans-serif;
+}
+
+.taskTable th{
+    padding: 20px 10px 10px 10px;
+}
+
+.taskTable td{
+    padding: 20px 10px 10px 10px;
+}
+
+.taskDescription{
+    padding-left: 20px;
+    text-align: left;
+}
+  
+  
+.deleteButton{
+    background-color: #dd4c41;
+    color: #e3e3e3;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: Sans-serif;
+    font-size: 16px;
+}  
+  
+.deleteButton:hover{
+    background-color: #d63333;
+}
+
+.editButton{
+    background-color: #2282f0;
+    color: #e3e3e3;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: Sans-serif;
+    font-size: 16px;
+}
+
+.editButton:hover{
+    background-color: #155cad;
+}
+
+/* Modal */
+
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: auto;
+    background-color: rgba(23, 23, 23, 0.5);
+}
+  
+.modalContent{
+    background-color: #e3e3e3;    
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    width: 200px;
+}
+  
+.close{
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+  
+.editInput{
+    font-size: 16px;    
+    font-family: Sans-serif;
+    padding: 4px 8px;
+    background-color: #fff;
+    border: 1px solid rgb(23, 23, 23);
+    border-radius: 4px;    
+    display: block;
+    margin: 0 auto 20px auto;
+    width: 90%;
+}
+
+.statusOptions{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+  
+.btnSave{
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 6px;
+    display: block;
+    margin: 30px auto 10px auto;
+    cursor: pointer;    
+}
+
+.btnSave:hover{
+    background-color: #358f38;
+}
+
+.formControl{
+    font-size: 16px;    
+    font-family: Sans-serif;
+    padding: 4px 8px;
+    background-color: #fff;
+    border: 1px solid rgb(23, 23, 23);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Resposividade */
+
+@media (max-width: 800px) {
+    .container{
+        margin: 50px auto;        
+        padding: 30px 0;
+    }
+
+    .row {
+        width: 100%;
+    }
+
+    .taskList {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .taskTable th, td{        
+        font-size: 13px;
+    }
+
+    .taskTable th{
+        padding: 10px 3px 10px 3px;
+    }
+    
+    .taskTable td{
+        padding: 20px 3px 10px 3px;
+    }
+
+    .taskDescription{
+        padding-left: 13px;
+        text-align: left;
+    }
+
+    .deleteButton{
+        background-color: #dd4c41;
+        color: #e3e3e3;
+        border: none;
+        padding: 6px 6px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-family: Sans-serif;
+        font-size: 13px;
+    }
+    
+    .editButton{
+        background-color: #2282f0;
+        color: #e3e3e3;
+        border: none;
+        padding: 6px 10px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-family: Sans-serif;
+        font-size: 13px;
+    }
+}

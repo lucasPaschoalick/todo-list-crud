@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="models/TaskModel.js"></script>
+    <script src="views/TaskView.js"></script>
+    <script src="services/taskService.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h1>Lista de Tarefas</h1>
+            <div class="formDiv">
+                <form id="addTaskForm">
+                    <div class="formRow">
+                        <label for="taskDescription">Tarefa</label>                        
+                        <textarea id="taskDescription" class="textArea" placeholder="Descrição da Tarefa" required></textarea>
+                        <br>                                               
+                        <input type="submit" class="formButton" value="Salvar">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="taskList">
+            <h2>Tarefas</h2>
+            <div class="tasks">
+                <table class="taskTable">
+                    <thead>
+                        <tr>
+                        <th>#</th>
+                        <th>Tarefa</th>
+                        <th>Status</th>
+                        <th>Deletar</th>
+                        <th>Editar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <script>
+                            $(document).ready(function() {            
+                                loadTasks();            
+                            });
+                        </script>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div id="editModal" class="modal">
+        <div class="modalContent">
+            <span class="close">&times;</span>
+            <h2>Editar Tarefa</h2>
+            <input type="hidden" id="editTaskId">
+            <label for="editTaskDescription">Tarefa</label>
+            <input type="text" id="editTaskDescription" class="editInput">
+            <label for="editTaskStatus">Status</label>
+            <div class="statusOptions">                
+                <select name="taskStatus" id="editTaskStatus" class="formControl">
+                    <option value="A Fazer">A Fazer</option>
+                    <option value="Em Progresso">Em Progresso</option>
+                    <option value="Concluída">Concluída</option>
+                </select>
+            </div>
+            <button id="saveChanges" class="btnSave">Salvar</button>
+        </div>
+    </div>
+</body>
+</html>
