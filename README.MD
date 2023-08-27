@@ -1,4 +1,4 @@
-# Desafio XNEO - Desenvolvedor Fullstack
+# Desafio Desenvolvedor Fullstack
 
 ## Descrição
 - Implementação de um sistema de gerenciamento básico de dados com operações de criação, leitura, atualização e exclusão (CRUD)
